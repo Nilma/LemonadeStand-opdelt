@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#000000" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    
+    <title>Redux</title>
+
+    <style>
+      button {
+        background-color: yellowgreen;
+      }
+    </style>
+  </head>
+  <body style="margin-left: 50px; margin-top: 50px; background-image: url('lemon.svg'); background-repeat: repeat; background-position: 20% 30%; background-size: 140px auto;">
+    
+    <div id="main" style="background-color: white; padding: 40px; width: auto; display:inline-block">
+      <h1>Lemonade Stand
+        <img src="lemon.svg" alt="" srcset="" style="width: 20px;">
+      </h1>
+      
+      <h2>Stock</h2>
+      <p><span id="stock">50</span> lemonades left</p>
+  
+      <button 
+          class="ui button yellow"
+          onClick="store.dispatch(buy())"
+      >
+          Buy Lemonade
+      </button>
+  
+      <h2>Revenue</h2>
+      <p><span id="revenue">0</span>$ today</p>
+  
+      <div>
+          <button 
+              class="ui button teal"
+              onClick="store.dispatch(increase())"
+          >
+              Increase Stock
+          </button>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.1/redux.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
