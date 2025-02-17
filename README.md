@@ -1,10 +1,10 @@
 
-Lemonade Stand App
+## Lemonade Stand App
 
 A simple React application where users can buy lemons (costs money) and sell lemonade (generates profit).
 This app demonstrates state management using React Hooks (useState) in Part 1 and Redux Toolkit in Part 2.
 
-Features
+## Features
 	•	Track profit dynamically
 	•	Sell lemonade → Profit increases by $5
 	•	Buy lemons → Profit decreases by $2
