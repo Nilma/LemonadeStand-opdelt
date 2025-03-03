@@ -1,9 +1,9 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { sellLemonade, buyLemons, resetProfit } from "./redux/profitSlice";
+import { sellLemonade, buyLemons } from "./redux/profitSlice";
 
 function LemonadeStand() {
-  const profit = useSelector((state) => state.profit.value);
+  const profit = useSelector((state) => state.profit?.value ?? 0); // Ensure default value
   const dispatch = useDispatch();
 
   return (
@@ -13,9 +13,6 @@ function LemonadeStand() {
       <button onClick={() => dispatch(sellLemonade())}>Sell Lemonade (+$5)</button>
       <button onClick={() => dispatch(buyLemons())} style={{ marginLeft: "10px" }}>
         Buy Lemons (-$2)
-      </button>
-      <button onClick={() => dispatch(resetProfit())} style={{ marginLeft: "10px" }}>
-        Reset Profit
       </button>
     </div>
   );
